@@ -20,7 +20,22 @@ header p {
   font-size: 0.9em;
 }
 
-#intro {
+nav a {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+#navMenu {
+  background-color: hsl(270, 9%, 17%);
+  background-image: url(./images/bg-pattern-mobile-nav.svg);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  height: 75vh;
+  width: auto;
+}
+
+.intro {
   color: white;
   background-color: hsl(270, 9%, 17%);
   background-image: url(./images/bg-pattern-intro-left-mobile.svg);
@@ -41,11 +56,40 @@ header p {
   letter-spacing: 0.2em;
 }
 
+.work {
+  color: white;
+  background-image: url(./images/bg-pattern-intro-right-mobile.svg);
+  background-repeat: no-repeat;
+  background-color: hsl(270, 9%, 17%);
+  background-position: right;
+  margin: 4rem 0.5rem;
+  padding: 1rem;
+}
+
+.socMed {
+  background-image: url(./images/bg-pattern-footer-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 1rem;
+  height: 200px;
+}
+
+.socMed img {
+  margin: 0.5rem;
+}
+
 footer ul[title]::before {
   content: attr(title);
-  margin-bottom: 1em;
+  margin-bottom: 2em;
+  color: hsl(273, 4%, 51%);
+  text-transform: uppercase;
+  font-size: small;
+  font-weight: 700;
 }
 
 footer li {
   list-style: none;
+  text-transform: uppercase;
+  font-size: smaller;
+  font-weight: 700;
 }
