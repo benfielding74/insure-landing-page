@@ -1,3 +1,11 @@
+:root {
+  --grayviolet: hsl(273, 4%, 51%);
+  --lightgray: hsl(0, 0%, 98%);
+  --verydkviolet: hsl(270, 9%, 17%);
+  --darkviolet: hsl(256, 26%, 20%);
+  --grayblue: hsl(216, 30%, 68%);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -16,7 +24,7 @@ body {
 }
 
 header p {
-  color: hsl(0, 0%, 98%);
+  color: var(--lightgray);
   font-size: 0.9em;
 }
 
@@ -26,8 +34,8 @@ nav a {
   text-transform: uppercase;
 }
 
-#navMenu {
-  background-color: hsl(270, 9%, 17%);
+.menuBg {
+  background-color: var(--verydkviolet);
   background-image: url(./images/bg-pattern-mobile-nav.svg);
   background-repeat: no-repeat;
   background-position: bottom;
@@ -37,7 +45,7 @@ nav a {
 
 .intro {
   color: white;
-  background-color: hsl(270, 9%, 17%);
+  background-color: var(--verydkviolet);
   background-image: url(./images/bg-pattern-intro-left-mobile.svg);
   display: block;
   background-repeat: no-repeat;
@@ -46,8 +54,8 @@ nav a {
 }
 
 .navBtns {
-  border: 2px solid hsl(0, 0%, 98%);
-  color: hsl(0, 0%, 98%);
+  border: 2px solid var(--lightgray);
+  color: var(--lightgray);
   background: transparent;
   margin: 1em;
   padding: 10px 26px;
@@ -60,7 +68,7 @@ nav a {
   color: white;
   background-image: url(./images/bg-pattern-intro-right-mobile.svg);
   background-repeat: no-repeat;
-  background-color: hsl(270, 9%, 17%);
+  background-color: var(--verydkviolet);
   background-position: right;
   margin: 4rem 0.5rem;
   padding: 1rem;
@@ -81,7 +89,7 @@ nav a {
 footer ul[title]::before {
   content: attr(title);
   margin-bottom: 2em;
-  color: hsl(273, 4%, 51%);
+  color: var(--grayviolet);
   text-transform: uppercase;
   font-size: small;
   font-weight: 700;
@@ -92,4 +100,31 @@ footer li {
   text-transform: uppercase;
   font-size: smaller;
   font-weight: 700;
+}
+
+@media only screen and (min-width: 600px) {
+  .menuBg {
+    background-color: white;
+    background-image: none;
+    height: auto;
+  }
+
+  nav a {
+    color: var(--grayviolet);
+  }
+
+  nav .navBtns {
+    border-color: var(--darkviolet);
+    color: var(--darkviolet);
+  }
+
+  nav .navBtns:hover {
+    background-color: var(--darkviolet);
+    color: white;
+  }
+
+  .navBtns:hover {
+    background-color: white;
+    color: var(--verydkviolet);
+  }
 }
